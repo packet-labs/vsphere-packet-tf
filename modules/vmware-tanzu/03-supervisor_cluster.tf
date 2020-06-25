@@ -1,19 +1,19 @@
 data "template_file" "esx_host_networking" {
   template = file("templates/configure_supervisor_cluster.py")
   vars = {
-    host = '${var.vcenter_host}'
-    user = '${var.vcenter_admin}'
-    password = '${var.vcenter_password}'
-    clustername = '${var.cluster_name}'
-    mastervmnetwork = '${var.cp_vm_network}'
-    startingip = '${var.starting_ip}'
-    mastersm = '${var.cp_subnet_mask}'
-    gatewayip = '${var.cp_gateway_ip}'
-    dnsserver = '${var.dns_server}'
-    ntpserver = '${var.ntp_server}'
-    storagepolicy = '${var.storage_policy_name}'
-    egressaddress = '${var.egress_starting_ip}'
-    ingressaddress = '${var.ingress_starting_ip}'
+    host            = var.vcenter_host
+    user            = var.vcenter_admin
+    password        = var.vcenter_password
+    clustername     = var.cluster_name
+    mastervmnetwork = var.cp_vm_network
+    startingip      = var.starting_ip
+    mastersm        = var.cp_subnet_mask
+    gatewayip       = var.cp_gateway_ip
+    dnsserver       = var.dns_server
+    ntpserver       = var.ntp_server
+    storagepolicy   = var.storage_policy_name
+    egressaddress   = var.egress_starting_ip
+    ingressaddress  = var.ingress_starting_ip
   }
 }
 
